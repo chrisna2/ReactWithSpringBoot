@@ -1,11 +1,45 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/spring_db?useUnicode=true&charaterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: spring
+    password: spring
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: test
   http:
     encoding:
-      charset:    UTF-8
+      charset: UTF-8
   mvc:
     view:
-      prefix:     /jsp/
-      suffix:     .jsp
+      prefix: /jsp/
+      suffix: .jsp
+  jpa:
+    properties:
+      hibernate: dialect:org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: create
+
 server:
+  port: 8080
   tomcat:
     uri-encoding: UTF-8
+
+hyunkee:
+  name: HyunKee
+  age : 29
+  fullName: ${hyunkee.name} Na
+
+logging:
+  level:
+    org:
+      hibernate: info
+
+
+
+    
