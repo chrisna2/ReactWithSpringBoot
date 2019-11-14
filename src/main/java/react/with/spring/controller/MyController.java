@@ -1,4 +1,4 @@
-package react.with.spring.reactspring;
+package react.with.spring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
