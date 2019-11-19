@@ -5,7 +5,8 @@ module.exports = {
     context: path.resolve(__dirname, 'src/main/jsx'),
     entry:{
         main:'./MainPage.jsx',
-        page1:'./Page1Page.jsx'
+        page1:'./Page1Page.jsx',
+        page2:'./Page2Page.jsx'
     },
     devtool: 'sourcemaps',
     cache: true,
